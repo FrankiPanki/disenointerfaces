@@ -148,8 +148,8 @@ window.addEventListener("load", function (evt) {
             elemento.setAttribute("numero", Math.floor(Math.random() * (6 - 1) + 1));
             ingredientes[index - 1] = parseInt(elemento.getAttribute("numero"));
             respaldo[index - 1] = parseInt(elemento.getAttribute("numero"));
-            $('[objeto=' + index.toString() + ']').attr("src", "/img/" + tipoa + ".png");
-            $('[simbolo=' + index.toString() + ']').attr("src", "/img/s" + ingredientes[index - 1].toString() + ".png");
+            $('[objeto=' + index.toString() + ']').attr("src", "img/" + tipoa + ".png");
+            $('[simbolo=' + index.toString() + ']').attr("src", "img/s" + ingredientes[index - 1].toString() + ".png");
         }
     }
 
@@ -180,7 +180,7 @@ window.addEventListener("load", function (evt) {
 
         if (ingredientes[datos.indx] == 0) {
             ++acabados;
-            $('#cas').attr('src', '/img/c' + acabados + '.png')
+            $('#cas').attr('src', 'img/c' + acabados + '.png')
         }
 
         if (ingredientes[datos.indx] < 0) {
@@ -188,7 +188,7 @@ window.addEventListener("load", function (evt) {
                 ingredientes[ind] = respaldo[ind];
             }
             acabados = 0;
-            $('#cas').attr('src', '/img/c0.png');
+            $('#cas').attr('src', 'img/c0.png');
             if (escore >= 2) {
                 escore = $("#score").text();
                 escore = (parseInt(escore) - 2).toString();
@@ -206,7 +206,7 @@ window.addEventListener("load", function (evt) {
         if (bandera == true) {
             ++nrecetas;
             acabados = 0;
-            $('#cas').attr('src', '/img/c0.png')
+            $('#cas').attr('src', 'img/c0.png')
             var tururu = document.getElementById("tururu");
             tururu.play();
             generaReceta();
