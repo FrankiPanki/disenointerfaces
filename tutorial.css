@@ -102,13 +102,13 @@
 
 #intruccion{
     position: absolute;
-    top: 20%;
+    top: 15%;
     left:  30%;
     z-index: 4;
     width: 50%;
     text-align: center;
     color: aliceblue;
-    font-size: 3em;
+    font-size: 300%;
 }
 
 .numbers{
