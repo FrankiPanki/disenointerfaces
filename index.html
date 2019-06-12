@@ -1,0 +1,203 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../recursos/bootstrap.min.css">
+    <script src="/recursos/jquery.min.js"></script>
+    <script src="/recursos/bootstrap.min.js"></script>
+    <script src="bundle.js"></script>
+    <link rel="stylesheet" href="juego.css">
+    <link rel="stylesheet" href="tutorial.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="transp modal-content">
+                <div id="transp" class="transp">
+                    <div id="modal1">
+                        <div></div>
+                        <div></div>
+                        <button type="button" id="resume" class="btn btn-success" data-dismiss="modal"></button>
+                        <button type="button" id="restart" class="reintentar btn btn-danger"></button>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="final" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="transp modal-content">
+                <div id="transp" class="transp">
+                    <div id="modal2">
+                        <div id="nrecetas"></div>
+                        <div id="escore"></div>
+                        <button type="button" id="terminar" class="btn btn-success">Finalizar</button>
+                        <button type="button" id="denuez" class="reintentar btn btn-primary">Reintentar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <audio id="inicial" volume="0.0">
+        <source src="sonidos/bonapetit.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="myamya">
+        <source src="sonidos/myamya.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="tururu">
+        <source src="sonidos/tururu.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="nyahaha">
+        <source src="sonidos/nyahaha.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="n1">
+        <source src="sonidos/1.m4a" type="audio/mpeg">
+    </audio>
+    <audio id="n2">
+        <source src="sonidos/2.m4a" type="audio/mpeg">
+    </audio>
+    <audio id="n3">
+        <source src="sonidos/3.m4a" type="audio/mpeg">
+    </audio>
+    <audio id="n4">
+        <source src="sonidos/4.m4a" type="audio/mpeg">
+    </audio>
+    <audio id="n5">
+        <source src="sonidos/5.m4a" type="audio/mpeg">
+    </audio>
+
+
+    <div id="tutorial">
+        <div class="tuto" id="recetat"> </div>
+        <div class="tuto" id="vaciot"></div>
+        <div class="tuto" id="relojt"></div>
+        <div class="tuto" id="sobrat"> </div>
+        <div class="tuto" id="infot"> </div>
+        <div class="tuto" id="sobra2t"> <button id="next"> </button></div>
+        <div class="tuto" id="mesat"></div>
+
+    </div>
+
+    <span id="intruccion">Primero veamos un pequeño tutorial</span>
+
+    <div id="unot" class="numberi">
+        <img src="img/num1.png" class="numberj"> <span class="numbers">= 1</span>
+    </div>
+
+    <div id="dost" class="numberi">
+        <img src="img/num2.png" class="numberj"> <span class="numbers">= 2</span>
+    </div>
+
+    <div id="trest" class="numberi">
+        <img src="img/num3.png" class="numberj"> <span class="numbers">= 3</span>
+    </div>
+    <div id="cuatrot" class="numberi">
+        <img src="img/num4.png" class="numberj"> <span class="numbers">= 4</span>
+    </div>
+    <div id="cincot"class="numberi">
+        <img src="img/num5.png" class="numberj"> <span class="numbers">= 5</span>
+    </div>
+
+
+
+
+    <div id="contenedor">
+        <div id="fondo">
+
+            <div id="head">
+                <div id="rej">
+
+                    <canvas id="reloj" width="90px" height="90px"></canvas>
+                    <div id="tiempo"></div>
+                </div>
+                <div id="score">0</div>
+                <div id="pausa">
+                    <button id="pausar" type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="#exampleModalCenter">
+
+                    </button>
+                </div>
+            </div>
+            <div id="receta">
+
+                <img src="" class="simbolo" simbolo=1 alt="">
+                <img src="" class="objeto" objeto=1 alt="">
+                <img src="" class="simbolo" simbolo=2 alt="">
+                <img src="" class="objeto" objeto=2 alt="">
+                <img src="" class="simbolo" simbolo=3 alt="">
+                <img src="" class="objeto" objeto=3 alt="">
+                <img src="" class="simbolo" simbolo=4 alt="">
+                <img src="" class="objeto" objeto=4 alt="">
+
+            </div>
+            <div id="vacio"></div>
+            <div id="cuchito">
+
+            </div>
+        </div>
+        <!-- SOLO HAY 8 ingredientes -->
+        <div id="mesa">
+            <div class="ingcon" id="ing1"><img src="img/1.png" class="ingre" draggable="false" indx="img1" tipo="1">
+            </div>
+            <div class="ingcon" id="ing2"><img src="img/2.png" class="ingre" draggable="false" indx="img2" tipo="2">
+            </div>
+            <div class="ingcon" id="ing3"><img src="img/3.png" class="ingre" draggable="false" indx="img3" tipo="3">
+            </div>
+            <div class="ingcon" id="ing3"><img src="img/4.png" class="ingre" draggable="false" indx="img4" tipo="4">
+            </div>
+            <div class="ingcon" id="ing1"><img src="img/5.png" class="ingre" draggable="false" indx="img5" tipo="5">
+            </div>
+            <div class="ingcon" id="ing2"><img src="img/6.png" class="ingre" draggable="false" indx="img6" tipo="6">
+            </div>
+            <div class="ingcon" id="ing2"><img src="img/7.png" class="ingre" draggable="false" indx="img7" tipo="7">
+            </div>
+            <div class="ingcon" id="ing2"><img src="img/8.png" class="ingre" draggable="false" indx="img8" tipo="8">
+            </div>
+            <div class="ingcon" id="ing2"><img src="img/9.png" class="ingre" draggable="false" indx="img7" tipo="9">
+            </div>
+            <div class="ingcon" id="ing2"><img src="img/10.png" class="ingre" draggable="false" indx="img8" tipo="10">
+            </div>
+            <div id="casuela">
+                <img id="cas" src="/img/c0.png">
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,349 @@
+@font-face {
+    font-family: fuji;
+    src: url("/recursos/Gyosho.ttf");
+    }
+
+html, body{
+    margin: 0%;
+    padding: 0%;
+    max-width: 100%;
+    max-height: 100%;
+     box-sizing: content-box;
+}
+
+body{
+    background-size: 100vw 100vh ;
+    background-repeat: no-repeat no-repeat; 
+    background-image:  url('/img/fondo.GIF');
+}
+
+canvas{
+}
+#pausar{
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	background-image: url("/img/pausa.png");
+	background-size: 100%;
+	align-self: center;
+    justify-self: center;
+}
+
+
+#resume{
+	width: 120px;
+	height: 120px;
+	border-radius: 100%;
+	background-image: url("/img/resume.png");
+	background-size: 100%;
+	align-self: center;
+    justify-self: center;
+}
+
+#restart{
+	width: 120px;
+	height: 120px;
+	border-radius: 100%;
+	background-image: url("/img/restart.png");
+	background-size: 100%;
+	align-self: center;
+    justify-self: center;
+}
+
+ #rej{
+    grid-row-end: reloj;
+    grid-row-start:reloj ;
+    grid-column-start: reloj;
+    grid-column-end: reloj;  
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+    align-self: stretch;
+    justify-self: stretch;
+
+
+
+}
+
+
+
+.ingre{
+    width: 70%;
+    height: 70%;
+    align-self: center;
+    justify-self: center;
+
+}
+
+.ingre:hover{
+    width: 90%;
+    height: 90%;
+}
+
+.simbolo{
+    width: 35%;
+    align-self: center;
+    justify-self: center;
+
+  
+}
+
+.objeto{
+    width: 30%;
+    align-self: center;
+    justify-self: baseline;
+}
+
+#cas{
+	width: 90%;
+	height: 90%;
+
+}
+
+
+
+
+#contenedor{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0%;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 100%;
+    grid-template-areas:    "fondo"
+                            "mesa";
+
+    
+
+}
+
+
+#fondo{
+    grid-row-end: fondo;
+    grid-row-start:fondo ;
+    grid-column-start: fondo;
+    grid-column-end: fondo;
+    display: grid;
+    grid-template-rows: 20% 52% 28%;
+    grid-template-columns:3% 27% 70%;
+    grid-template-areas:    "espacio receta head"
+                            "espacio receta chuchito"
+                            "espacio vacio chuchito";
+}
+
+#receta{
+    grid-row-end: receta;
+    grid-row-start:receta ;
+    grid-column-start: receta;
+    grid-column-end: receta;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:    "simbolo imagen"
+                            "simbolo imagen"
+                            "simbolo imagen"
+                            "simbolo imagen";
+
+
+}
+#mesa{
+    grid-row-end: mesa;
+    grid-row-start: mesa;
+    grid-column-start: mesa;
+    grid-column-end: mesa;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: repeat(6, 16.6%);
+    grid-template-areas:    "ing1 ing2 ing3 ing4 ing5 ing6"
+    						"ing1 ing2 casuela casuela ing5 ing6";
+
+
+}
+
+#casuela{
+    grid-row-end: casuela;
+    grid-row-start:casuela ;
+    grid-column-start:casuela ;
+    grid-column-end: casuela;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+
+}
+
+
+#head{
+
+    grid-row-end: head;
+    grid-row-start:head ;
+    grid-column-start: head;
+    grid-column-end: head;  
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 18% 24% 27% 10% 1fr ;
+    grid-template-areas:    "finl reloj vacio score finr";
+    align-items: baseline;
+    justify-items: center;
+    padding-top: 0%;
+
+
+} 
+
+
+
+
+#score{
+	font-family: fuji;
+    font-size: 2em;
+    grid-row-end: score;
+    grid-row-start:score ;
+    grid-column-start: score;
+    grid-column-end: score;
+    align-self: center;
+    justify-self: center;
+}
+
+
+
+#cuchito{
+font-family: fuji;
+    font-size: 30em;
+    color: rgb(70, 157, 197);
+    padding-left:17%;
+	grid-row-end: chuchito;
+    grid-row-start: chuchito ;
+    grid-column-start: chuchito;
+    grid-column-end: chuchito;
+}
+
+
+#pausa{
+	grid-row-end: finr;
+    grid-row-start: finr ;
+    grid-column-start: finr;
+    grid-column-end: finr;  
+    
+}
+
+#transp{
+	background-color:rgba(0,0,0,0.0);
+    width: 500px;
+    height: 400px;
+
+
+}
+
+.transp{
+	background-color:rgba(0,0,0,0.0);
+}
+
+#modal1{
+	width: 100%;
+	height: 100%;
+    background: url('/img/pausap.png');
+    background-size: 100%;
+    background-repeat: no-repeat; 
+    display: grid;
+    grid-template-rows: 44% 36% 20% ;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:    "nada nada"
+     						"pausar resume"
+     						"nada nada";
+
+}
+#modal2{
+	width: 100%;
+	height: 100%;
+    background: url('/img/end.png');
+    background-size: 100%;
+    background-repeat: no-repeat; 
+    display: grid;
+    grid-template-rows: 37% 5% 31% 9% 20%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:    "naya naya"
+     						"nrecetas nrecetas"
+     						"escore escore"
+     						"denuez terminar"
+     						"naya2 naya2";
+
+}
+
+
+
+#finr{
+	grid-row-end: finr;
+    grid-row-start: finr ;
+    grid-column-start: finr;
+    grid-column-end: finr;  
+    
+}
+#nrecetas{
+	font-family: fuji;
+    font-size: 1.2em;
+	grid-row-end: nrecetas;
+    grid-row-start: nrecetas ;
+    grid-column-start: nrecetas;
+    grid-column-end: nrecetas; 
+    padding-left: 75%; 
+    
+
+}
+#escore{
+	font-family: fuji;
+    font-size: 4em;
+	grid-row-end: escore;
+    grid-row-start: escore ;
+    grid-column-start: escore;
+    grid-column-end: escore; 
+    align-self: center;
+    justify-self: center;    
+}
+#denuez{
+	grid-row-end: denuez;
+    grid-row-start: denuez ;
+    grid-column-start: denuez;
+    grid-column-end: denuez;
+    margin-left: 30%;
+    margin-right: 10%  
+    
+}
+#terminar{
+	grid-row-end: terminar;
+    grid-row-start: terminar ;
+    grid-column-start: terminar;
+    grid-column-end: terminar;
+    margin-left: 10%;
+    margin-right: 30%    
+    
+}
+
+#tiempo{
+	font-family: fuji;
+    font-size: 2em;
+    align-self: center;
+    justify-self: center;
+}
+
+.ingcon{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+/*
+
+
+
+
+*/
+
+
+
+

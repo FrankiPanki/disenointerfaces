@@ -1,0 +1,147 @@
+@font-face {
+    font-family: fuji;
+    src: url("/recursos/Gyosho.ttf");
+    }
+#tutorial{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    display: grid;
+    grid-template-rows: 10% 40% 50%;
+    grid-template-columns: 31% 12% 16.5% 40.5%;
+    grid-template-areas: "recetat vaciot relojt sobrat"
+                         "recetat infot infot sobra2t"
+                         "mesat mesat mesat mesat";
+}
+
+.tuto{
+    background: rgba(0,0,0,0.9);
+
+}
+
+
+#recetat{
+    grid-column-end: recetat;
+    grid-column-start: recetat;
+    grid-row-end: recetat;
+    grid-row-start: recetat;
+
+
+}
+#vaciot{
+    grid-column-end: vaciot;
+    grid-column-start: vaciot;
+    grid-row-end: vaciot;
+    grid-row-start: vaciot;
+
+}
+#relojt{
+    grid-column-end: relojt;
+    grid-column-start: relojt;
+    grid-row-end: relojt;
+    grid-row-start: relojt;
+
+
+}
+#sobrat{
+    grid-column-end: sobrat;
+    grid-column-start: sobrat;
+    grid-row-end: sobrat;
+    grid-row-start: sobrat;
+
+}
+
+#sobra2t{
+    grid-column-end: sobra2t;
+    grid-column-start: sobra2t;
+    grid-row-end: sobra2t;
+    grid-row-start: sobra2t;
+    padding-right: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+ 
+
+
+}
+#mesat{
+    grid-column-end: mesat;
+    grid-column-start: mesat;
+    grid-row-end: mesat;
+    grid-row-start: mesat;
+
+
+}
+#infot{
+    grid-column-end: infot;
+    grid-column-start: infot;
+    grid-row-end: infot;
+    grid-row-start: infot;
+    font-family: fuji;
+    font-size: 4em;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+#next{
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	background-image: url("img/boton.png");
+    background-size: 100%;
+    
+
+
+}
+
+#intruccion{
+    position: absolute;
+    top: 20%;
+    left:  30%;
+    z-index: 4;
+    width: 50%;
+    text-align: center;
+    color: aliceblue;
+    font-size: 3em;
+}
+
+.numbers{
+    font-family: fuji;
+    text-align: center;
+    color: aliceblue;
+    font-size: 3em;   
+}
+
+
+.numberj{
+    width: 10%;
+
+}
+
+.numberi{
+    position: absolute;
+    left:  -100%;
+    z-index: 4; 
+
+}
+#unot{
+top: 10%;
+}
+#dost{
+top: 20%;
+}
+#trest{
+top: 30%;
+}
+#cuatrot{
+top: 40%;
+}
+#cincot{
+top: 50%;
+}
